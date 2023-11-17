@@ -1,5 +1,5 @@
-//import org.json.JSONObject;
-//import org.json.XML;
+import org.json.JSONObject;
+import org.json.XML;
 
 public class Adapter {
     private OldSystem oldSystem;
@@ -10,8 +10,7 @@ public class Adapter {
 
     public String getEmployeeDataJSON() {
         String xmlData = oldSystem.getEmployeeDataXML();
-        xmlData = "This is the JSON format";
-//        JSONObject jsonData = XML.toJSONObject(xmlData); // this will convert the XML to JSON
+        JSONObject jsonData = XML.toJSONObject(xmlData); // this will convert the XML to JSON
         return xmlData;
     }
 }
